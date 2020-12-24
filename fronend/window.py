@@ -458,7 +458,7 @@ class Window(QMainWindow):
             elif res == QMessageBox.Cancel:
                 return
 
-    def eventFilter(self, obj, event=None):
+    def eventFilter(self, obj, event):
         if type(obj) == QLineEdit and event.type() == QEvent.KeyPress and \
                 event.key() == Qt.Key_Z:
             modifiers = QApplication.keyboardModifiers()
